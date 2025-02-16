@@ -23,5 +23,23 @@ $(document).ready(() => {
                 hasError = true
             }
         }
+
+        if (!hasError) {
+            $.ajax({
+                method: 'POST',
+                url: 'https://testologia.ru/checkout',
+                data: {
+                    product: $('#product-input').val(),
+                    name: $('#name-input').val(),
+                    phone: $('#phone-input').val(),
+                }
+            }).done((message) => {
+                if (message.success) {
+
+                } else {
+                    alert('Возникла ошибка при оформлении заказа, позвоните нам и сделайте заказ')
+                }
+            })
+        }
     })
 })
