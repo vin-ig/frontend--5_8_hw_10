@@ -11,8 +11,10 @@ $(document).ready(() => {
 
 
     $('#submit-order').click(() => {
+        const loader = $('.loader')
         $('.error-input').css({visibility: 'hidden'})
         let hasError = false
+
         for (let input of $('.order-form input')) {
             input = $(input)
             input.css({borderColor: 'initial'})
@@ -25,6 +27,7 @@ $(document).ready(() => {
         }
 
         if (!hasError) {
+            loader.css({display: 'flex'})
             $.ajax({
                 method: 'POST',
                 url: 'https://testologia.ru/checkout',
@@ -34,6 +37,7 @@ $(document).ready(() => {
                     phone: $('#phone-input').val(),
                 }
             }).done((message) => {
+                loader.hide()
                 if (message.success) {
 
                 } else {
