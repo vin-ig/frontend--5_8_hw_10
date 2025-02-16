@@ -1,0 +1,17 @@
+{
+  "name": "5_8_hw_10",
+  "version": "1.0.0",
+  "description": "___",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}

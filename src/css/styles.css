@@ -5,27 +5,27 @@
 
 @font-face {
     font-family: "Tavolga";
-    src: url("../assets/fonts/tavolga-free.ttf");
+    src: url("../../assets/fonts/tavolga-free.ttf");
 }
 
 @font-face {
     font-family: "Gilroy Regular";
-    src: url("../assets/fonts/Gilroy-Regular.ttf");
+    src: url("../../assets/fonts/Gilroy-Regular.ttf");
 }
 
 @font-face {
     font-family: "Gilroy Medium";
-    src: url("../assets/fonts/Gilroy-Medium.ttf");
+    src: url("../../assets/fonts/Gilroy-Medium.ttf");
 }
 
 @font-face {
     font-family: "Gilroy Bold";
-    src: url("../assets/fonts/Gilroy-Bold.ttf");
+    src: url("../../assets/fonts/Gilroy-Bold.ttf");
 }
 
 @font-face {
     font-family: "Gilroy ExtraBold";
-    src: url("../assets/fonts/Gilroy-Extrabold.ttf");
+    src: url("../../assets/fonts/Gilroy-Extrabold.ttf");
 }
 
 
@@ -404,7 +404,6 @@ body {
     font-size: 15px;
     font-family: "Gilroy Bold";
     color: rgb(118, 12, 34);
-    margin-bottom: 15px;
     border: 1px solid #821328;
     border-radius: 9999px;
     width: 294px;
@@ -418,9 +417,16 @@ body {
     color: #c0707c;
 }
 
+.error-input {
+    color: red;
+    visibility: hidden;
+    padding: 5px 0 10px 25px;
+}
+
 .button.button-order {
     width: 294px;
     height: 60px;
+    margin-top: 15px;
 }
 
 .order-image-berry {

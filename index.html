@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Macaroons</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/adaptive.css">
 </head>
 <body>
 
@@ -185,10 +185,13 @@
             <p>Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего пекаря!</p>
             <h3>Ваш выбор</h3>
             <input type="text" placeholder="Напишите, что хотите заказать...">
+            <div class="error-input">Введите название макарун</div>
             <h3>Заполните данные для заказа</h3>
             <input type="text" placeholder="Ваше имя">
+            <div class="error-input">Введите имя</div>
             <input type="text" placeholder="+375 (__) ___-__-__">
-            <button class="button button-order">Оформить заказ</button>
+            <div class="error-input">Введите телефон</div>
+            <button type="button" class="button button-order" id="submit-order">Оформить заказ</button>
         </form>
     </div>
 </section>
@@ -218,17 +221,7 @@
     </div>
 </section>
 
-<script>
-    document.getElementById('burger').onclick = function () {
-        document.getElementById('menu').classList.add('open')
-    }
-
-    document.querySelectorAll('#menu *').forEach((item) => {
-        item.onclick = () => {
-            document.getElementById('menu').classList.remove('open');
-        }
-    })
-</script>
-
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="src/js/index.js"></script>
 </body>
 </html>
