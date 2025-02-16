@@ -1,3 +1,5 @@
+const orderUrl = 'https://testologia.ru/checkout'
+
 $(document).ready(() => {
     document.getElementById('burger').onclick = function () {
         document.getElementById('menu').classList.add('open')
@@ -30,7 +32,7 @@ $(document).ready(() => {
             loader.css({display: 'flex'})
             $.ajax({
                 method: 'POST',
-                url: 'https://testologia.ru/checkout',
+                url: orderUrl,
                 data: {
                     product: $('#product-input').val(),
                     name: $('#name-input').val(),
@@ -39,7 +41,14 @@ $(document).ready(() => {
             }).done((message) => {
                 loader.hide()
                 if (message.success) {
-
+                    let form = $('.order-form')
+                    form.hide()
+                    let successBlock = $('<div class="success-block">Спасибо за Ваш заказ. Мы скоро свяжемся с Вами!</div>')
+                    successBlock.css({
+                        width: form.width(),
+                        // height: form.height(),  // Выглядит некрасиво, поэтому высоту не трогаем
+                    })
+                    form.after(successBlock)
                 } else {
                     alert('Возникла ошибка при оформлении заказа, позвоните нам и сделайте заказ')
                 }

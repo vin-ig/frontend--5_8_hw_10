@@ -445,6 +445,20 @@ body {
     animation-duration: 3s;
 }
 
+.success-block {
+    border: 1px solid #821328;
+    border-radius: 20px;
+    color: rgb(118, 12, 34);
+    font-size: 25px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    text-align: center;
+    padding: 60px 30px;
+    box-sizing: border-box;
+}
 
 /* FOOTER */
 .footer {
