@@ -1,3 +1,7 @@
+@import "config";
+@import "loader";
+@import "adaptive";
+
 * {
     margin: 0;
     padding: 0;
@@ -40,11 +44,11 @@ body {
 }
 
 .bg-pink {
-    background: #eba8b1;
+    background: @pink-color-1;
 }
 
 .bg-lightpink {
-    background: #ffefef;
+    background: @lightpink-color;
 }
 
 
@@ -52,17 +56,16 @@ body {
 .header {
     padding-top: 38px;
     padding-bottom: 29px;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        font-size: 0;
+    }
 }
 
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header .logo {
-    font-size: 0;
-}
 
 .menu {
     padding-right: 56px;
@@ -83,7 +86,7 @@ body {
     padding-bottom: 3px;
     font-size: 14px;
     font-family: "Gilroy Medium";
-    color: rgb(119, 11, 29);
+    color: @darkred-color-1;
     text-decoration: none;
 }
 
@@ -94,14 +97,14 @@ body {
 .contacts {
     font-size: 16px;
     font-family: "Gilroy Bold";
-    color: rgb(255, 255, 255);
+    color: @white-color;
 }
 
 .burger {
     position: relative;
     width: 40px;
     height: 2px;
-    background: #821328;
+    background: @darkred-color-2;
 }
 
 .burger::before,
@@ -145,7 +148,7 @@ body {
 .main-info h1 {
     padding-bottom: 60px;
     font-size: 55px;
-    color: rgb(255, 255, 255);
+    color: @white-color;
     line-height: 1.091;
 }
 
@@ -153,7 +156,7 @@ body {
     padding-bottom: 80px;
     max-width: 360px;
     font-size: 18px;
-    color: rgb(255, 255, 255);
+    color: @white-color;
     line-height: 1.389;
 }
 
@@ -161,7 +164,7 @@ body {
     background: linear-gradient(90deg, rgb(113,8,30) 0%, rgb(215,72,92) 100%);
     border: 0;
     border-radius: 9999px;
-    color: white;
+    color: @white-color;
     font-family: 'Gilroy Bold', sans-serif;
     line-height: 1;
     transition: all 400ms;
@@ -193,7 +196,7 @@ body {
     border-radius: 50%;
     width: 700px;
     height: 700px;
-    border: 1px solid #821328;
+    border: 1px solid @darkred-color-2;
     animation: pulse 2s infinite backwards;
     position: absolute;
     top: -115px;
@@ -219,7 +222,7 @@ body {
 
 .advantages-description h2 {
     font-size: 45px;
-    color: rgb(51, 25, 7);
+    color: @dark-braun-color;
     line-height: 1.222;
     max-width: 488px;
     padding-bottom: 60px;
@@ -228,7 +231,7 @@ body {
 .advantages-description p {
     font-size: 18px;
     font-family: "Gilroy Regular";
-    color: rgb(51, 25, 7);
+    color: @dark-braun-color;
     line-height: 1.556;
     max-width: 400px;
 }
@@ -245,8 +248,8 @@ body {
 }
 
 .advantages-item:hover .advantages-item-number {
-    background: #eba8b1;
-    color: #821328;
+    background: @pink-color-1;
+    color: @darkred-color-2;
 }
 
 .advantages-item-number {
@@ -254,12 +257,12 @@ body {
     justify-content: center;
     align-items: flex-end;
     border-radius: 50%;
-    background-color: rgb(130, 19, 40);
+    background-color: @darkred-color-2;
     width: 70px;
     height: 70px;
     font-size: 60px;
     font-family: "Gilroy ExtraBold";
-    color: rgb(255, 255, 255);
+    color: @white-color;
     line-height: 44px;
     transition: all 400ms;
 }
@@ -269,14 +272,14 @@ body {
     padding-bottom: 20px;
     font-size: 20px;
     font-family: "Gilroy ExtraBold";
-    color: rgb(51, 25, 7);
+    color: @dark-braun-color;
 
 }
 
 .advantages-item-text {
     font-size: 15px;
     font-family: "Gilroy Medium";
-    color: rgb(51, 25, 7);
+    color: @dark-braun-color;
     line-height: 1.333;
 }
 
@@ -292,7 +295,7 @@ body {
 
 .products h2 {
     font-size: 45px;
-    color: rgb(255, 255, 255);
+    color: @white-color;
     padding-bottom: 143px;
 }
 
@@ -304,7 +307,7 @@ body {
 }
 
 .product {
-    border: 2px solid white;
+    border: 2px solid @white-color;
     border-radius: 20px;
     padding: 0 19px 25px;
 }
@@ -321,7 +324,7 @@ body {
 
 .product h3 {
     font-size: 18px;
-    color: rgb(255, 255, 255);
+    color: @white-color;
     padding-bottom: 26px;
 }
 
@@ -334,7 +337,7 @@ body {
 .product-details span {
     font-size: 15px;
     font-family: "Gilroy Regular";
-    color: rgb(255, 255, 255);
+    color: @white-color;
     display: block;
     text-align: left;
 }
@@ -378,14 +381,14 @@ body {
 
 .order-form h2 {
     font-size: 45px;
-    color: rgb(51, 25, 7);
+    color: @dark-braun-color;
     padding-bottom: 41px;
 }
 
 .order-form p {
     font-size: 18px;
     font-family: "Gilroy Regular";
-    color: rgb(51, 25, 7);
+    color: @dark-braun-color;
     line-height: 1.556;
     padding-bottom: 23px;
     max-width: 405px;
@@ -394,7 +397,7 @@ body {
 .order-form h3 {
     font-size: 18px;
     font-family: "Gilroy Bold";
-    color: rgb(18, 10, 6);
+    color: @black-color;
     padding-top: 25px;
     padding-bottom: 21px;
 }
@@ -403,8 +406,8 @@ body {
     display: block;
     font-size: 15px;
     font-family: "Gilroy Bold";
-    color: rgb(118, 12, 34);
-    border: 1px solid #821328;
+    color: @darkred-color-1;
+    border: 1px solid @darkred-color-2;
     border-radius: 9999px;
     width: 294px;
     height: 60px;
@@ -414,11 +417,11 @@ body {
 }
 
 .order-form input::placeholder {
-    color: #c0707c;
+    color: @pink-color-2;
 }
 
 .error-input {
-    color: red;
+    color: @red-color;
     visibility: hidden;
     padding: 5px 0 10px 25px;
 }
@@ -446,15 +449,15 @@ body {
 }
 
 .success-block {
-    border: 1px solid #821328;
+    border: 1px solid @darkred-color-2;
     border-radius: 20px;
-    color: rgb(118, 12, 34);
+    color: @darkred-color-1;
     font-size: 25px;
     line-height: 1.5;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: white;
+    background: @white-color;
     text-align: center;
     padding: 60px 30px;
     box-sizing: border-box;
@@ -462,7 +465,7 @@ body {
 
 /* FOOTER */
 .footer {
-    background: #c0707c;
+    background: @pink-color-2;
     padding: 73px 0 62px;
 }
 
@@ -476,7 +479,7 @@ body {
 .rights {
     font-size: 12px;
     font-family: "Gilroy Regular";
-    color: rgb(227, 172, 180);
+    color: @pink-color-3;
     order: 4;
 }
 
@@ -490,7 +493,7 @@ body {
 .instagram svg {
     width: 35px;
     height: 35px;
-    fill: white;
+    fill: @white-color;
     padding-bottom: 15px;
 }
 
@@ -501,7 +504,7 @@ body {
 .instagram span {
     font-size: 16px;
     font-family: "Gilroy Bold";
-    color: rgb(255, 255, 255);
+    color: @white-color;
 }
 
 .footer .contacts {
@@ -539,13 +542,13 @@ body {
     position: relative;
     padding: 15px 0 14px 11px;
     box-sizing: border-box;
-    background: #feefee;
-    border: 2px solid #770a1d;
+    background: @lightpink-color;
+    border: 2px solid @darkred-color-1;
     margin-right: 8px;
 
     font-size: 15px;
     font-family: "Gilroy Medium";
-    color: rgb(119, 10, 29);
+    color: @darkred-color-1;
     line-height: 1;
 
     transform: translateY(120px);
@@ -561,7 +564,7 @@ body {
     left: 100%;
     top: calc(50% - 10px);
     border-top: 10px solid transparent;
-    border-left: 14px solid #770a1d;
+    border-left: 14px solid @darkred-color-1;
     border-bottom: 10px solid transparent;
 }
 
@@ -573,7 +576,7 @@ body {
     left: 100%;
     top: calc(50% - 7.5px);
     border-top: 7.5px solid transparent;
-    border-left: 10.6px solid #feefee;
+    border-left: 10.6px solid @lightpink-color;
     border-bottom: 7.5px solid transparent;
 }
 
