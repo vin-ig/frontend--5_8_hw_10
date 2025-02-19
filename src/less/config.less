@@ -17,3 +17,18 @@
     background: @lightpink-color;
 }
 
+.button(@width, @height) {
+    width: @width;
+    height: @height;
+    background: linear-gradient(90deg, rgb(113,8,30) 0%, rgb(215,72,92) 100%);
+    border: 0;
+    border-radius: 9999px;
+    color: @white-color;
+    font-family: 'Gilroy Bold', sans-serif;
+    line-height: 1;
+    transition: all 400ms;
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0px 5px 9px 1px rgba(130, 19, 40, 0.5);
+    }
+}
