@@ -4,10 +4,13 @@
 @lightpink-color: #ffefef;
 @darkred-color-1: rgb(119, 11, 29);
 @darkred-color-2: rgb(130, 19, 40);
+@darkred-color-3: rgba(130, 19, 40, 0.5);
 @white-color: rgb(255, 255, 255);
 @dark-braun-color: rgb(51, 25, 7);
 @black-color: rgb(18, 10, 6);
 @red-color: red;
+@gradient-start: rgb(113,8,30);
+@gradient-end: rgb(215,72,92);
 
 .bg-pink {
     background: @pink-color-1;
@@ -20,7 +23,7 @@
 .button(@width, @height) {
     width: @width;
     height: @height;
-    background: linear-gradient(90deg, rgb(113,8,30) 0%, rgb(215,72,92) 100%);
+    background: linear-gradient(90deg, @gradient-start 0%, @gradient-end 100%);
     border: 0;
     border-radius: 9999px;
     color: @white-color;
@@ -29,6 +32,6 @@
     transition: all 400ms;
     &:hover {
         cursor: pointer;
-        box-shadow: 0px 5px 9px 1px rgba(130, 19, 40, 0.5);
+        box-shadow: 0px 5px 9px 1px @darkred-color-3;
     }
 }

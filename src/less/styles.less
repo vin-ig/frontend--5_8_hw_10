@@ -1,5 +1,6 @@
 @import "config";
 @import "loader";
+//@import "green_theme";
 
 * {
     margin: 0;
@@ -456,7 +457,7 @@ body {
     z-index: 1;
     .present-circle {
         border-radius: 50%;
-        background: radial-gradient(#71081e, #d7485c);
+        background: radial-gradient(@gradient-start, @gradient-end);
         width: 90px;
         height: 90px;
         display: flex;
@@ -464,7 +465,7 @@ body {
         align-items: center;
         margin-left: 9px;
         &:hover {
-            box-shadow: 0px 0px 13px 2px rgba(130, 19, 40, 0.5);
+            box-shadow: 0px 0px 13px 2px @darkred-color-3;
             cursor: pointer;
         }
         &:hover + .present-label {
