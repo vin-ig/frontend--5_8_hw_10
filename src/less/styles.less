@@ -40,9 +40,17 @@ body {
     font-size: 0;
 }
 
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+}
+
 
 /* HEADER */
 .header {
+    .bg-pink();
     padding-top: 38px;
     padding-bottom: 29px;
     .container {
@@ -85,6 +93,7 @@ body {
     width: 40px;
     height: 2px;
     background: @darkred-color-2;
+    display: none;
     &::before, &::after {
         content: '';
         position: absolute;
@@ -101,13 +110,14 @@ body {
     }
 }
 
-.burger, .close {
+.close {
     display: none;
 }
 
 
 /* MAIN */
 .main {
+    .bg-pink();
     padding: 143px 0 145px;
     overflow: hidden;
     .container {
@@ -187,6 +197,7 @@ body {
 
 /* ADVANTAGES */
 .advantages {
+    .bg-lightpink();
     padding: 119px 0 120px;
     .advantages-title {
         display: flex;
@@ -260,6 +271,7 @@ body {
 
 /* PRODUCT */
 .products {
+    .bg-pink();
     padding: 120px 0 100px;
     .container {
         text-align: center;
@@ -317,6 +329,7 @@ body {
 
 /* ORDER */
 .order {
+    .bg-lightpink();
     .container {
         padding-top: 98px;
         padding-bottom: 120px;
